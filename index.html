@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Perpustakaan kutu buku</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#koleksi">Koleksi</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Selamat Datang di Perpustakaan XYZ</h2>
+            <p>Temukan berbagai koleksi buku dan sumber informasi kami.</p>
+        </div>
+    </section>
+
+    <section id="koleksi" class="collection">
+        <div class="container">
+            <h2>Koleksi Kami</h2>
+            <div class="book" onclick="openModal('book1')">
+                <img src="images/teras.png" <a href="/files/filosofi.pdf" alt="Buku 1">
+                <h3>filosofi teras</h3>
+                <p>Filosofi Teras adalah sebuah buku pengantar filsafat Stoa yang dibuat khusus sebagai panduan moral anak muda. Buku ini ditulis untuk menjawab permasalahan tentang tingkat kekhawatiran yang cukup tinggi dalam skala nasional, terutama yang dialami oleh anak muda. Filosofi Teras, dibuat dengan kolaborasi beberapa pihak, seperti ilustrator, Levina Lesmana yang cukup berjasa dalam pembuatan sampul buku, dan si penulis, Henry Manampiring, yang terinspirasi dari buku How to be a Stoic karya Massimo Piggliuci, seorang penulis kenamaan Italia yang juga penganut Stoisisme. Buku ini dilengkapi dengan beberapa data seperti survei kekhawatiran nasional dan juga wawancara dari beberapa tokoh yang dianggap ahli dalam hal psikologi.</p>
+            </div>
+            <div class="book" onclick="openModal('book2')">
+                <img src="images/tere.jpeg" width="180" height="180" <a href="/files/pergi.pdf" alt="Buku 2">
+                <h3>pulang pergi</h3>
+                <p>Bercerita tentang Bujang yang kembali harus berpetualang setelah pergi dan pulang. Saat Bujang sedang berada di pusara mamak dan bapaknya, Bujang mendapatkan sebuah pesan dari Krestiny Otets, pemimpin brotherhood Bratva.
+                     Isi pesan tersebut adalah perintah untuk Bujang dalam dua hari kedepan untuk bertunangan dengan Maria, putri Otets. Jika Bujang tidak hadir dalam acara pertunangan tersebut, berarti Bujang telah membuat malu dan menyakiti hati Maria. Sebagai balasannya, jika Bujang mengingkari pertunangannya, pusara kedua orangtuanya akan Otets ratakan.</p>
+            </div>
+            <!-- Tambahkan buku lainnya di sini -->
+        </div>
+    </section>
+
+    <section id="tentang" class="about">
+        <div class="container">
+            <h2>Tentang Kami</h2>
+            <p>Di Perpustakaan XYZ, kami percaya bahwa literasi adalah fondasi dari masyarakat yang cerdas dan terinformasi. Kami berkomitmen untuk menyediakan akses ke berbagai sumber daya informasi dan literatur yang mendukung pembelajaran sepanjang hayat. Dengan koleksi yang luas dan beragam, kami bertujuan untuk menjadi pusat pengetahuan dan pengembangan bagi semua anggota komunitas kami.
+
+                Visi Kami
+                Visi kami adalah untuk menjadi pusat pengetahuan terdepan yang mendorong pertumbuhan intelektual dan pribadi. Kami berusaha untuk menciptakan lingkungan di mana setiap individu merasa terinspirasi untuk belajar, berinovasi, dan mengeksplorasi ide-ide baru. Kami ingin menjadi tempat di mana setiap orang, tanpa memandang usia atau latar belakang, dapat menemukan sumber daya yang mereka butuhkan untuk berkembang dan sukses.
+                
+                Misi Kami
+                Misi kami adalah menyediakan akses yang mudah dan inklusif ke berbagai sumber informasi yang mendukung pembelajaran dan perkembangan pribadi. Kami berkomitmen untuk:
+                
+                Menyediakan Koleksi Berkualitas: Kami terus memperbarui dan memperluas koleksi buku, jurnal, dan materi lainnya untuk memenuhi kebutuhan informasi komunitas kami.
+                Mengembangkan Program Edukatif: Kami menyelenggarakan berbagai program dan acara yang dirancang untuk memfasilitasi pembelajaran aktif dan keterlibatan komunitas.
+                Meningkatkan Aksesibilitas: Kami berusaha untuk memastikan bahwa semua layanan dan sumber daya kami dapat diakses oleh semua anggota masyarakat, termasuk mereka yang memiliki kebutuhan khusus.
+                Mendukung Inovasi: Kami mendorong penggunaan teknologi dan metode modern untuk meningkatkan pengalaman pengunjung dan efisiensi operasional perpustakaan kami.</p>
+        </div>
+    </section>
+
+    <section id="kontak" class="contact">
+        <div class="container">
+            <h2>Kontak Kami</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Perpustakaan kutu buku. Semua hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Book Details -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Book details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
